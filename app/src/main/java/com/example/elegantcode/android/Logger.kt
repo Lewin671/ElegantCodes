@@ -1,3 +1,5 @@
+import android.util.Log
+
 object Logger {
     private const val VERBOSE = 1
     private const val DEBUG = 2
