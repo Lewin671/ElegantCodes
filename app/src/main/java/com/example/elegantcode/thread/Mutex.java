@@ -15,8 +15,9 @@ public class Mutex {
 
     // atomic operation
     synchronized void P() {
-        resourceNumber--;
-        if (resourceNumber < 0) {
+
+        // check whether resource is ok
+        while (resourceNumber < 1) {
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -24,11 +25,12 @@ public class Mutex {
             }
         }
 
+        resourceNumber--;
     }
 
     // atomic operation
     synchronized void V() {
         resourceNumber++;
-        notify();
+        notifyAll();
     }
 }
