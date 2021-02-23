@@ -6,9 +6,10 @@ import java.util.List;
 public class MutexTest {
     private static int count = 0;
 
-    public static void main(String[] args) throws InterruptedException {
-        List<Thread> threadList = new ArrayList<>();
+    public static void main(String[] args) throws Exception {
+        System.out.println("start to test");
 
+        List<Thread> threadList = new ArrayList<>();
         Mutex mutex = new Mutex();
 
         for (int i = 0; i < 50000; i++) {
