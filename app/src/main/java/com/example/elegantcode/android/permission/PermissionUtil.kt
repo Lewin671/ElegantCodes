@@ -27,8 +27,12 @@ class PermissionUtil(private val context: Context) {
 
 
     // 添加申请的权限
-    fun permission(permission: String,title:String? = null,message:String? = null): PermissionUtil {
-        permissions.add(Permission(permission,title,message))
+    fun permission(
+        permission: String,
+        title: String? = null,
+        message: String? = null
+    ): PermissionUtil {
+        permissions.add(Permission(permission, title, message))
         return this
     }
 

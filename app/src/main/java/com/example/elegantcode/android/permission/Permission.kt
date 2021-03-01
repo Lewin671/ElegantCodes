@@ -1,6 +1,8 @@
 package com.example.elegantcode.android.permission
 
 data class Permission(val name: String, val title: String? = null, val message: String? = null) {
+
+    // 常用危险权限
     companion object {
         const val READ_CALENDAR = "android.permission.READ_CALENDAR"
         const val WRITE_CALENDAR = "android.permission.WRITE_CALENDAR"
